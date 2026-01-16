@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript - Roadmap vers React (Version Détaillée)</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+      }
+
+      header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 40px;
+        text-align: center;
+      }
+
+      header h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+      }
+
+      header p {
+        font-size: 1.2em;
+        opacity: 0.9;
+      }
+
+      .content {
+        padding: 40px;
+      }
+
+      section {
+        margin-bottom: 60px;
+      }
+
+      h2 {
+        color: #667eea;
+        font-size: 2em;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 3px solid #667eea;
+      }
+
+      h3 {
+        color: #764ba2;
+        font-size: 1.5em;
+        margin: 25px 0 15px 0;
+      }
+
+      h4 {
+        color: #555;
+        font-size: 1.2em;
+        margin: 20px 0 10px 0;
+      }
+
+      p {
+        margin-bottom: 15px;
+        text-align: justify;
+      }
+
+      pre {
+        margin: 15px 0;
+        border-radius: 8px;
+        overflow-x: auto;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      code {
+        font-family: "Consolas", "Monaco", "Courier New", monospace;
+        font-size: 0.9em;
+      }
+
+      .badge {
+        display: inline-block;
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-size: 0.9em;
+        font-weight: bold;
+        margin-left: 10px;
+      }
+
+      .badge-essential {
+        background: #ff6b6b;
+        color: white;
+      }
+
+      .badge-important {
+        background: #ffd93d;
+        color: #333;
+      }
+
+      .info-box {
+        background: #e3f2fd;
+        border-left: 4px solid #2196f3;
+        padding: 15px;
+        margin: 20px 0;
+        border-radius: 5px;
+      }
+
+      .warning-box {
+        background: #fff3e0;
+        border-left: 4px solid #ff9800;
+        padding: 15px;
+        margin: 20px 0;
+        border-radius: 5px;
+      }
+
+      .success-box {
+        background: #e8f5e9;
+        border-left: 4px solid #4caf50;
+        padding: 15px;
+        margin: 20px 0;
+        border-radius: 5px;
+      }
+
+      ul,
+      ol {
+        margin: 15px 0 15px 30px;
+      }
+
+      li {
+        margin-bottom: 8px;
+      }
+
+      .timeline {
+        background: #f5f5f5;
+        padding: 30px;
+        border-radius: 10px;
+        margin: 20px 0;
+      }
+
+      .timeline h3 {
+        color: #667eea;
+      }
+
+      footer {
+        background: #333;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 0.9em;
+      }
+
+      .toc {
+        background: #f8f9fa;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 40px;
+      }
+
+      .toc h3 {
+        color: #667eea;
+        margin-bottom: 15px;
+      }
+
+      .toc ul {
+        list-style: none;
+        margin: 0;
+      }
+
+      .toc li {
+        margin: 8px 0;
+      }
+
+      .toc a {
+        color: #667eea;
+        text-decoration: none;
+        transition: all 0.3s;
+      }
+
+      .toc a:hover {
+        color: #764ba2;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>JavaScript - Roadmap vers React</h1>
+        <p>De 70% à 100% de préparation - Guide Complet avec Exemples</p>
+        <p style="font-size: 0.9em; margin-top: 10px">
+          📚 Version Détaillée avec Coloration Syntaxique
+        </p>
+      </header>
+
+      <div class="content">
+        <!-- Table des matières -->
+        <div class="toc">
+          <h3>📑 Table des matières</h3>
+          <ul>
+            <li><a href="#destructuring">1. Destructuring</a></li>
+            <li><a href="#spread-rest">2. Spread & Rest operators</a></li>
+            <li><a href="#promises">3. Promises & async/await</a></li>
+            <li><a href="#modules">4. Modules ES6</a></li>
+            <li><a href="#array-methods">5. Array methods avancées</a></li>
+            <li>
+              <a href="#optional-chaining"
+                >6. Optional chaining & Nullish coalescing</a
+              >
+            </li>
+            <li><a href="#classes">7. Classes ES6</a></li>
+            <li><a href="#local-storage">8. Local Storage</a></li>
+            <li><a href="#ternaires">9. Ternaires & short-circuit</a></li>
+            <li><a href="#error-handling">10. Error handling robuste</a></li>
+            <li><a href="#priorites">🎯 Priorités pour React</a></li>
+            <li><a href="#timeline">🚀 Timeline recommandée</a></li>
+          </ul>
+        </div>
+
+        <!-- Section 1: Destructuring -->
+        <section id="destructuring">
+          <h2>
+            1. Destructuring
+            <span class="badge badge-important">🎯 Important</span>
+          </h2>
+
+          <h3>Qu'est-ce que c'est ?</h3>
+          <p>
+            Le destructuring permet d'extraire des valeurs d'objets ou de
+            tableaux et de les assigner à des variables de manière concise.
+          </p>
+
+          <h4>Objets - Syntaxe de base</h4>
+          <pre><code class="language-javascript">// Ancienne méthode
+const user = { name: "Alice", age: 25, city: "Paris" };
+const name = user.name;
+const age = user.age;
+
+// Avec destructuring
+const { name, age } = user;
+console.log(name); // "Alice"
+console.log(age);  // 25</code></pre>
+
+          <h4>Objets - Renommage de variables</h4>
+          <pre><code class="language-javascript">const user = { name: "Alice", age: 25 };
+const { name: userName, age: userAge } = user;
+console.log(userName); // "Alice"
+console.log(userAge);  // 25</code></pre>
+
+          <h4>Objets - Valeurs par défaut</h4>
+          <pre><code class="language-javascript">const user = { name: "Alice" };
+const { name, age = 18 } = user; // age prend 18 par défaut
+console.log(age); // 18</code></pre>
+
+          <h4>Tableaux - Syntaxe de base</h4>
+          <pre><code class="language-javascript">const colors = ["red", "green", "blue", "yellow"];
+const [first, second] = colors;
+console.log(first);  // "red"
+console.log(second); // "green"</code></pre>
+
+          <h4>Tableaux - Ignorer des éléments</h4>
+          <pre><code class="language-javascript">const [first, , third] = [1, 2, 3];
+console.log(first); // 1
+console.log(third); // 3 (on a ignoré le 2)</code></pre>
+
+          <h4>Dans les paramètres de fonctions</h4>
+          <pre><code class="language-javascript">// Sans destructuring
+button.addEventListener("click", (e) => {
+    console.log(e.target);
+    console.log(e.type);
+});
+
+// Avec destructuring
+button.addEventListener("click", ({ target, type }) => {
+    console.log(target); // directement accessible
+    console.log(type);   // "click"
+});</code></pre>
+
+          <div class="success-box">
+            <strong>💡 Cas d'usage React :</strong>
+            <pre><code class="language-javascript">// Destructuring des props dans un composant
+function UserCard({ name, age, city }) {
+    return &lt;div&gt;{name} a {age} ans et vit à {city}&lt;/div&gt;;
+}
+
+// Destructuring du state
+const [count, setCount] = useState(0);</code></pre>
+          </div>
+        </section>
+
+        <!-- Section 2: Spread & Rest -->
+        <section id="spread-rest">
+          <h2>
+            2. Spread & Rest operators
+            <span class="badge badge-important">🎯 Important</span>
+          </h2>
+
+          <h4>Spread operator (...) - Étaler un tableau</h4>
+          <pre><code class="language-javascript">const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+const combined = [...arr1, ...arr2];
+console.log(combined); // [1, 2, 3, 4, 5, 6]
+
+// Ajouter des éléments
+const extended = [...arr1, 99, 100];
+console.log(extended); // [1, 2, 3, 99, 100]</code></pre>
+
+          <h4>Spread operator - Copier un tableau</h4>
+          <pre><code class="language-javascript">const original = [1, 2, 3];
+const copy = [...original];
+copy.push(4);
+console.log(original); // [1, 2, 3] - non modifié
+console.log(copy);     // [1, 2, 3, 4]</code></pre>
+
+          <h4>Spread operator - Copier et modifier un objet</h4>
+          <pre><code class="language-javascript">const user = { name: "Bob", age: 25 };
+const updatedUser = { ...user, age: 30, city: "Lyon" };
+console.log(updatedUser); 
+// { name: "Bob", age: 30, city: "Lyon" }</code></pre>
+
+          <h4>Spread operator - Fusionner des objets</h4>
+          <pre><code class="language-javascript">const defaults = { theme: "dark", language: "fr" };
+const userPrefs = { language: "en" };
+const config = { ...defaults, ...userPrefs };
+console.log(config); 
+// { theme: "dark", language: "en" } - userPrefs écrase defaults</code></pre>
+
+          <h4>Rest operator (...) - Rassembler des arguments</h4>
+          <pre><code class="language-javascript">// Fonction avec nombre variable d'arguments
+function sum(...numbers) {
+    return numbers.reduce((acc, n) => acc + n, 0);
+}
+console.log(sum(1, 2, 3));       // 6
+console.log(sum(1, 2, 3, 4, 5)); // 15</code></pre>
+
+          <h4>Rest operator - Dans le destructuring</h4>
+          <pre><code class="language-javascript">const [first, second, ...others] = [1, 2, 3, 4, 5];
+console.log(first);  // 1
+console.log(second); // 2
+console.log(others); // [3, 4, 5]
+
+const { name, ...restProps } = { name: "Alice", age: 25, city: "Paris" };
+console.log(name);      // "Alice"
+console.log(restProps); // { age: 25, city: "Paris" }</code></pre>
+
+          <div class="success-box">
+            <strong>💡 Cas d'usage React :</strong>
+            <pre><code class="language-javascript">// Mise à jour immutable du state
+const [items, setItems] = useState([1, 2, 3]);
+setItems([...items, 4]); // Ajouter un élément
+
+// Passer toutes les props
+function Parent() {
+    const props = { name: "Alice", age: 25 };
+    return &lt;Child {...props} /&gt;;
+}</code></pre>
+          </div>
+        </section>
+
+        <!-- Section 3: Promises -->
+        <section id="promises">
+          <h2>
+            3. Promises & async/await
+            <span class="badge badge-essential">🔥 ESSENTIEL</span>
+          </h2>
+
+          <h3>Qu'est-ce qu'une Promise ?</h3>
+          <p>
+            Une Promise représente une opération asynchrone qui peut réussir
+            (resolve) ou échouer (reject).
+          </p>
+
+          <h4>Création d'une Promise</h4>
+          <pre><code class="language-javascript">const myPromise = new Promise((resolve, reject) => {
+    const success = true;
+    if (success) {
+        resolve("Opération réussie !");
+    } else {
+        reject("Erreur !");
+    }
+});
+
+myPromise
+    .then(result => console.log(result))
+    .catch(error => console.error(error));</code></pre>
+
+          <h4>Fetch API - Récupérer des données</h4>
+          <pre><code class="language-javascript">// Méthode avec .then()
+fetch("https://jsonplaceholder.typicode.com/users")
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Erreur réseau");
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log(data);
+    })
+    .catch(error => {
+        console.error("Erreur:", error);
+    });</code></pre>
+
+          <h4>async/await - Syntaxe moderne</h4>
+          <pre><code class="language-javascript">async function getUsers() {
+    try {
+        const response = await fetch("https://jsonplaceholder.typicode.com/users");
+        if (!response.ok) {
+            throw new Error("Erreur réseau");
+        }
+        const data = await response.json();
+        console.log(data);
+        return data;
+    } catch (error) {
+        console.error("Erreur:", error);
+    }
+}
+
+// Appel de la fonction
+getUsers();</code></pre>
+
+          <h4>async/await - Attendre plusieurs promises</h4>
+          <pre><code class="language-javascript">// Exécution séquentielle
+async function getData() {
+    try {
+        const users = await fetch("/api/users").then(r => r.json());
+        const posts = await fetch("/api/posts").then(r => r.json());
+        
+        return { users, posts };
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+// Exécution parallèle (plus rapide)
+async function getDataParallel() {
+    try {
+        const [users, posts] = await Promise.all([
+            fetch("/api/users").then(r => r.json()),
+            fetch("/api/posts").then(r => r.json())
+        ]);
+        
+        return { users, posts };
+    } catch (error) {
+        console.error(error);
+    }
+}</code></pre>
+
+          <h4>POST request avec fetch</h4>
+          <pre><code class="language-javascript">async function createUser(userData) {
+    try {
+        const response = await fetch("https://api.example.com/users", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(userData)
+        });
+        
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error("Erreur:", error);
+    }
+}
+
+// Utilisation
+createUser({ name: "Alice", age: 25 });</code></pre>
+
+          <div class="success-box">
+            <strong>💡 Cas d'usage React :</strong>
+            <pre><code class="language-javascript">// Dans un useEffect
+useEffect(() => {
+    async function fetchData() {
+        const data = await fetch("/api/users").then(r => r.json());
+        setUsers(data);
+    }
+    fetchData();
+}, []);</code></pre>
+          </div>
+        </section>
+
+        <!-- Section 4: Modules -->
+        <section id="modules">
+          <h2>
+            4. Modules ES6
+            <span class="badge badge-essential">🔥 ESSENTIEL</span>
+          </h2>
+
+          <h3>Qu'est-ce qu'un module ?</h3>
+          <p>
+            Les modules permettent de diviser le code en fichiers séparés et
+            réutilisables.
+          </p>
+
+          <h4>Export nommé (fichier utils.js)</h4>
+          <pre><code class="language-javascript">// Export individuel
+export const PI = 3.14159;
+
+export function add(a, b) {
+    return a + b;
+}
+
+export const multiply = (a, b) => a * b;
+
+// Export groupé
+const subtract = (a, b) => a - b;
+const divide = (a, b) => a / b;
+export { subtract, divide };</code></pre>
+
+          <h4>Export par défaut (fichier Calculator.js)</h4>
+          <pre><code class="language-javascript">// Un seul export default par fichier
+export default class Calculator {
+    add(a, b) {
+        return a + b;
+    }
+}
+
+// Ou avec une fonction
+export default function greet(name) {
+    return `Hello ${name}`;
+}</code></pre>
+
+          <h4>Import nommé (fichier main.js)</h4>
+          <pre><code class="language-javascript">// Import spécifique
+import { add, multiply } from './utils.js';
+console.log(add(2, 3));      // 5
+console.log(multiply(2, 3)); // 6
+
+// Import avec alias
+import { add as sum } from './utils.js';
+console.log(sum(2, 3)); // 5
+
+// Import tout
+import * as utils from './utils.js';
+console.log(utils.add(2, 3));      // 5
+console.log(utils.multiply(2, 3)); // 6</code></pre>
+
+          <h4>Import par défaut</h4>
+          <pre><code class="language-javascript">// Le nom peut être choisi librement
+import Calculator from './Calculator.js';
+const calc = new Calculator();
+
+import greet from './greet.js';
+console.log(greet("Alice"));</code></pre>
+
+          <h4>Combiner import default et nommés</h4>
+          <pre><code class="language-javascript">// fichier utils.js
+export default function multiply(a, b) {
+    return a * b;
+}
+export const add = (a, b) => a + b;
+export const PI = 3.14;
+
+// fichier main.js
+import multiply, { add, PI } from './utils.js';</code></pre>
+
+          <div class="success-box">
+            <strong>💡 Cas d'usage React :</strong>
+            <pre><code class="language-javascript">// Composant React (Button.jsx)
+export default function Button({ label, onClick }) {
+    return &lt;button onClick={onClick}&gt;{label}&lt;/button&gt;;
+}
+
+// App.jsx
+import Button from './components/Button';
+import { useState } from 'react';
+
+function App() {
+    return &lt;Button label="Cliquez" onClick={() => alert("Test")} /&gt;;
+}</code></pre>
+          </div>
+        </section>
+
+        <!-- Section 5: Array Methods -->
+        <section id="array-methods">
+          <h2>
+            5. Array methods avancées
+            <span class="badge badge-important">🎯 Important</span>
+          </h2>
+
+          <h4>map() - Transformer chaque élément</h4>
+          <pre><code class="language-javascript">// Transformer des nombres
+const numbers = [1, 2, 3, 4];
+const doubled = numbers.map(n => n * 2);
+console.log(doubled); // [2, 4, 6, 8]
+
+// Transformer des objets
+const users = [
+    { name: "Alice", age: 25 },
+    { name: "Bob", age: 30 }
+];
+const names = users.map(user => user.name);
+console.log(names); // ["Alice", "Bob"]
+
+// Créer de nouveaux objets
+const formattedUsers = users.map(user => ({
+    fullName: user.name.toUpperCase(),
+    isAdult: user.age >= 18
+}));</code></pre>
+
+          <h4>filter() - Filtrer les éléments</h4>
+          <pre><code class="language-javascript">const numbers = [1, 2, 3, 4, 5, 6];
+const evens = numbers.filter(n => n % 2 === 0);
+console.log(evens); // [2, 4, 6]
+
+const users = [
+    { name: "Alice", age: 17 },
+    { name: "Bob", age: 25 },
+    { name: "Charlie", age: 15 }
+];
+const adults = users.filter(user => user.age >= 18);
+console.log(adults); // [{ name: "Bob", age: 25 }]</code></pre>
+
+          <h4>reduce() - Réduire à une seule valeur</h4>
+          <pre><code class="language-javascript">// Somme
+const numbers = [1, 2, 3, 4];
+const sum = numbers.reduce((accumulator, current) => {
+    return accumulator + current;
+}, 0); // 0 est la valeur initiale
+console.log(sum); // 10
+
+// Compter les occurrences
+const fruits = ["apple", "banana", "apple", "orange", "banana", "apple"];
+const count = fruits.reduce((acc, fruit) => {
+    acc[fruit] = (acc[fruit] || 0) + 1;
+    return acc;
+}, {});
+console.log(count); // { apple: 3, banana: 2, orange: 1 }
+
+// Créer un objet à partir d'un tableau
+const users = [
+    { id: 1, name: "Alice" },
+    { id: 2, name: "Bob" }
+];
+const usersById = users.reduce((acc, user) => {
+    acc[user.id] = user;
+    return acc;
+}, {});
+console.log(usersById);
+// { 1: { id: 1, name: "Alice" }, 2: { id: 2, name: "Bob" } }</code></pre>
+
+          <h4>find() - Trouver un élément</h4>
+          <pre><code class="language-javascript">const users = [
+    { id: 1, name: "Alice" },
+    { id: 2, name: "Bob" },
+    { id: 3, name: "Charlie" }
+];
+const user = users.find(u => u.id === 2);
+console.log(user); // { id: 2, name: "Bob" }
+
+const notFound = users.find(u => u.id === 999);
+console.log(notFound); // undefined</code></pre>
+
+          <h4>some() & every() - Vérifications</h4>
+          <pre><code class="language-javascript">const numbers = [1, 2, 3, 4];
+const hasEven = numbers.some(n => n % 2 === 0);
+console.log(hasEven); // true
+
+const allEven = [2, 4, 6, 8].every(n => n % 2 === 0);
+console.log(allEven); // true</code></pre>
+
+          <h4>Chaînage de méthodes</h4>
+          <pre><code class="language-javascript">const users = [
+    { name: "Alice", age: 17, active: true },
+    { name: "Bob", age: 25, active: true },
+    { name: "Charlie", age: 30, active: false },
+    { name: "David", age: 22, active: true }
+];
+
+const activeAdultNames = users
+    .filter(u => u.active)           // Garder seulement les actifs
+    .filter(u => u.age >= 18)        // Garder seulement les adultes
+    .map(u => u.name)                // Extraire seulement les noms
+    .sort();                          // Trier alphabétiquement
+
+console.log(activeAdultNames); // ["Bob", "David"]</code></pre>
+
+          <div class="success-box">
+            <strong>💡 Cas d'usage React :</strong>
+            <pre><code class="language-javascript">// Afficher une liste d'éléments
+function UserList({ users }) {
+    return (
+        &lt;ul&gt;
+            {users.map(user => (
+                &lt;li key={user.id}&gt;{user.name}&lt;/li&gt;
+            ))}
+        &lt;/ul&gt;
+    );
+}
+
+// Filtrer et afficher
+function ActiveUsers({ users }) {
+    const activeUsers = users.filter(u => u.active);
+    return (
+        &lt;div&gt;
+            {activeUsers.map(user => (
+                &lt;UserCard key={user.id} user={user} /&gt;
+            ))}
+        &lt;/div&gt;
+    );
+}</code></pre>
+          </div>
+        </section>
+
+        <!-- Section 6: Optional Chaining -->
+        <section id="optional-chaining">
+          <h2>6. Optional chaining & Nullish coalescing</h2>
+
+          <h4>Optional chaining (?.) - Accès sécurisé</h4>
+          <pre><code class="language-javascript">// Sans optional chaining
+const user = { name: "Alice" };
+// Risque d'erreur si user.profile est undefined
+// const city = user.profile.address.city; // ❌ TypeError
+
+// Vérification manuelle
+const city = user && user.profile && user.profile.address 
+    ? user.profile.address.city 
+    : undefined;
+
+// Avec optional chaining
+const citySafe = user?.profile?.address?.city;
+console.log(citySafe); // undefined (pas d'erreur)</code></pre>
+
+          <h4>Optional chaining avec les tableaux</h4>
+          <pre><code class="language-javascript">const data = {
+    users: [
+        { name: "Alice", posts: [{ title: "Hello" }] },
+        { name: "Bob" }
+    ]
+};
+
+const firstPost = data.users?.[0]?.posts?.[0]?.title;
+console.log(firstPost); // "Hello"
+
+const bobPosts = data.users?.[1]?.posts?.[0]?.title;
+console.log(bobPosts); // undefined</code></pre>
+
+          <h4>Nullish coalescing (??) - Valeur par défaut</h4>
+          <pre><code class="language-javascript">// Ancienne méthode avec || (problème avec 0, false, "")
+const port1 = 0 || 3000;
+console.log(port1); // 3000 (mais on voulait 0 !)
+
+// Avec ?? (seulement null/undefined)
+const port2 = 0 ?? 3000;
+console.log(port2); // 0 ✅
+
+const config = {
+    timeout: 0,
+    retries: null,
+    debug: false
+};
+
+const timeout = config.timeout ?? 5000;
+const retries = config.retries ?? 3;
+const debug = config.debug ?? true;
+
+console.log(timeout); // 0 (valeur configurée)
+console.log(retries); // 3 (valeur par défaut car null)
+console.log(debug);   // false (valeur configurée)</code></pre>
+
+          <div class="success-box">
+            <strong>💡 Cas d'usage React :</strong>
+            <pre><code class="language-javascript">function UserProfile({ user }) {
+    return (
+        &lt;div&gt;
+            &lt;h1&gt;{user?.name ?? "Utilisateur inconnu"}&lt;/h1&gt;
+            &lt;p&gt;{user?.profile?.bio ?? "Pas de bio"}&lt;/p&gt;
+            &lt;button onClick={user?.onEdit?.()}&gt;Éditer&lt;/button&gt;
+        &lt;/div&gt;
+    );
+}</code></pre>
+          </div>
+        </section>
+
+        <!-- Section 7: Classes -->
+        <section id="classes">
+          <h2>7. Classes ES6</h2>
+
+          <h4>Création de classe de base</h4>
+          <pre><code class="language-javascript">class User {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    
+    greet() {
+        return `Bonjour, je suis ${this.name}`;
+    }
+    
+    isAdult() {
+        return this.age >= 18;
+    }
+}
+
+const user = new User("Alice", 25);
+console.log(user.greet());    // "Bonjour, je suis Alice"
+console.log(user.isAdult());  // true</code></pre>
+
+          <h4>Héritage (extends)</h4>
+          <pre><code class="language-javascript">class Animal {
+    constructor(name) {
+        this.name = name;
+    }
+    
+    speak() {
+        return `${this.name} fait un bruit`;
+    }
+}
+
+class Dog extends Animal {
+    constructor(name, breed) {
+        super(name); // Appelle le constructeur parent
+        this.breed = breed;
+    }
+    
+    speak() {
+        return `${this.name} aboie !`;
+    }
+    
+    fetch() {
+        return `${this.name} rapporte la balle`;
+    }
+}
+
+const dog = new Dog("Rex", "Labrador");
+console.log(dog.speak());  // "Rex aboie !"
+console.log(dog.fetch());  // "Rex rapporte la balle"</code></pre>
+
+          <h4>Getters et Setters</h4>
+          <pre><code class="language-javascript">class Rectangle {
+    constructor(width, height) {
+        this.width = width;
+        this.height = height;
+    }
+    
+    get area() {
+        return this.width * this.height;
+    }
+    
+    get perimeter() {
+        return 2 * (this.width + this.height);
+    }
+    
+    set dimensions({ width, height }) {
+        this.width = width;
+        this.height = height;
+    }
+}
+
+const rect = new Rectangle(10, 5);
+console.log(rect.area);      // 50 (pas besoin de ())
+console.log(rect.perimeter); // 30
+
+rect.dimensions = { width: 20, height: 10 };
+console.log(rect.area);      // 200</code></pre>
+        </section>
+
+        <!-- Section 8: Local Storage -->
+        <section id="local-storage">
+          <h2>8. Local Storage</h2>
+
+          <h3>Qu'est-ce que le Local Storage ?</h3>
+          <p>
+            Le Local Storage permet de stocker des données dans le navigateur de
+            manière persistante (elles restent même après fermeture du
+            navigateur).
+          </p>
+
+          <h4>Sauvegarder des données simples</h4>
+          <pre><code class="language-javascript">// Sauvegarder une chaîne
+localStorage.setItem("username", "Alice");
+
+// Sauvegarder un nombre (sera converti en string)
+localStorage.setItem("score", "150");
+
+// Sauvegarder un booléen (sera converti en string)
+localStorage.setItem("isDarkMode", "true");</code></pre>
+
+          <h4>Sauvegarder des objets (JSON)</h4>
+          <pre><code class="language-javascript">const user = {
+    name: "Alice",
+    age: 25,
+    preferences: {
+        theme: "dark",
+        language: "fr"
+    }
+};
+
+// Convertir en JSON avant de sauvegarder
+localStorage.setItem("user", JSON.stringify(user));</code></pre>
+
+          <h4>Récupérer des données</h4>
+          <pre><code class="language-javascript">// Récupérer une chaîne
+const username = localStorage.getItem("username");
+console.log(username); // "Alice"
+
+// Récupérer un objet (penser à parser)
+const userJSON = localStorage.getItem("user");
+const user = JSON.parse(userJSON);
+console.log(user.name); // "Alice"
+console.log(user.preferences.theme); // "dark"</code></pre>
+
+          <h4>Exemple : Panier d'achat</h4>
+          <pre><code class="language-javascript">// Ajouter un produit au panier
+function addToCart(product) {
+    const cart = JSON.parse(localStorage.getItem("cart") || "[]");
+    cart.push(product);
+    localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+// Récupérer le panier
+function getCart() {
+    return JSON.parse(localStorage.getItem("cart") || "[]");
+}
+
+// Vider le panier
+function clearCart() {
+    localStorage.removeItem("cart");
+}
+
+// Utilisation
+addToCart({ id: 1, name: "T-shirt", price: 20 });
+addToCart({ id: 2, name: "Pantalon", price: 50 });
+console.log(getCart());</code></pre>
+
+          <div class="success-box">
+            <strong>💡 Cas d'usage React :</strong>
+            <pre><code class="language-javascript">// Hook personnalisé pour le Local Storage
+function useLocalStorage(key, initialValue) {
+    const [value, setValue] = useState(() => {
+        const saved = localStorage.getItem(key);
+        return saved ? JSON.parse(saved) : initialValue;
+    });
+    
+    useEffect(() => {
+        localStorage.setItem(key, JSON.stringify(value));
+    }, [key, value]);
+    
+    return [value, setValue];
+}
+
+// Utilisation
+function App() {
+    const [theme, setTheme] = useLocalStorage("theme", "light");
+    
+    return (
+        &lt;button onClick={() => setTheme(theme === "light" ? "dark" : "light")}&gt;
+            Toggle Theme
+        &lt;/button&gt;
+    );
+}</code></pre>
+          </div>
+        </section>
+
+        <!-- Section 9: Ternaires -->
+        <section id="ternaires">
+          <h2>9. Ternaires & short-circuit</h2>
+
+          <h4>Opérateur ternaire - Syntaxe de base</h4>
+          <pre><code class="language-javascript">// Syntaxe: condition ? valeurSiVrai : valeurSiFaux
+
+const age = 20;
+const status = age >= 18 ? "adulte" : "mineur";
+console.log(status); // "adulte"
+
+// Équivalent avec if/else
+let status2;
+if (age >= 18) {
+    status2 = "adulte";
+} else {
+    status2 = "mineur";
+}</code></pre>
+
+          <h4>Ternaires imbriqués</h4>
+          <pre><code class="language-javascript">const score = 75;
+const grade = score >= 90 ? "A" 
+            : score >= 80 ? "B"
+            : score >= 70 ? "C"
+            : score >= 60 ? "D"
+            : "F";
+console.log(grade); // "C"</code></pre>
+
+          <h4>Short-circuit avec && (ET logique)</h4>
+          <pre><code class="language-javascript">// Si la condition est vraie, exécute la partie droite
+const isLoggedIn = true;
+isLoggedIn && console.log("Bienvenue !"); // Affiche "Bienvenue !"
+
+const user = { name: "Alice" };
+user && console.log(user.name); // Affiche "Alice"</code></pre>
+
+          <h4>Short-circuit avec || (OU logique)</h4>
+          <pre><code class="language-javascript">// Retourne la première valeur truthy
+const username = "";
+const displayName = username || "Anonyme";
+console.log(displayName); // "Anonyme"
+
+const count = 0;
+const displayCount = count || 10;
+console.log(displayCount); // 10 (attention avec 0 !)
+
+// Meilleur avec ?? pour gérer 0
+const displayCountBetter = count ?? 10;
+console.log(displayCountBetter); // 0</code></pre>
+
+          <div class="success-box">
+            <strong>💡 Cas d'usage React - Rendu conditionnel :</strong>
+            <pre><code class="language-javascript">function UserGreeting({ user }) {
+    return (
+        &lt;div&gt;
+            {/* Avec ternaire */}
+            {user ? (
+                &lt;h1&gt;Bienvenue {user.name}&lt;/h1&gt;
+            ) : (
+                &lt;h1&gt;Veuillez vous connecter&lt;/h1&gt;
+            )}
+            
+            {/* Avec short-circuit && */}
+            {user && &lt;p&gt;Email: {user.email}&lt;/p&gt;}
+            {user?.isAdmin && &lt;button&gt;Panneau admin&lt;/button&gt;}
+        &lt;/div&gt;
+    );
+}</code></pre>
+          </div>
+        </section>
+
+        <!-- Section 10: Error Handling -->
+        <section id="error-handling">
+          <h2>10. Error handling robuste</h2>
+
+          <h4>Try/catch de base</h4>
+          <pre><code class="language-javascript">try {
+    // Code qui peut causer une erreur
+    const data = JSON.parse('{"name": "Alice"}');
+    console.log(data.name); // "Alice"
+} catch (error) {
+    // Gérer l'erreur
+    console.error("Erreur:", error.message);
+}</code></pre>
+
+          <h4>Finally - Code qui s'exécute toujours</h4>
+          <pre><code class="language-javascript">function loadData() {
+    let loading = true;
+    
+    try {
+        console.log("Chargement...");
+        const data = fetchDataFromAPI(); // Peut échouer
+        console.log("Données chargées:", data);
+    } catch (error) {
+        console.error("Erreur:", error.message);
+    } finally {
+        // S'exécute TOUJOURS, même si erreur
+        loading = false;
+        console.log("Fin du chargement");
+    }
+}</code></pre>
+
+          <h4>Lancer des erreurs personnalisées (throw)</h4>
+          <pre><code class="language-javascript">function divide(a, b) {
+    if (b === 0) {
+        throw new Error("Division par zéro impossible");
+    }
+    return a / b;
+}
+
+try {
+    const result = divide(10, 0);
+    console.log(result);
+} catch (error) {
+    console.error("Erreur:", error.message);
+    // "Erreur: Division par zéro impossible"
+}</code></pre>
+
+          <h4>Gestion d'erreurs avec async/await</h4>
+          <pre><code class="language-javascript">async function fetchUser(userId) {
+    try {
+        const response = await fetch(`/api/users/${userId}`);
+        
+        if (!response.ok) {
+            throw new Error(`Erreur ${response.status}`);
+        }
+        
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error("Erreur:", error.message);
+        return null;
+    }
+}</code></pre>
+
+          <div class="success-box">
+            <strong>💡 Cas d'usage React :</strong>
+            <pre><code class="language-javascript">function UserProfile({ userId }) {
+    const [user, setUser] = useState(null);
+    const [error, setError] = useState(null);
+    const [loading, setLoading] = useState(true);
+    
+    useEffect(() => {
+        async function fetchUser() {
+            try {
+                setLoading(true);
+                const response = await fetch(`/api/users/${userId}`);
+                
+                if (!response.ok) {
+                    throw new Error("Utilisateur introuvable");
+                }
+                
+                const data = await response.json();
+                setUser(data);
+                setError(null);
+            } catch (err) {
+                setError(err.message);
+                setUser(null);
+            } finally {
+                setLoading(false);
+            }
+        }
+        
+        fetchUser();
+    }, [userId]);
+    
+    if (loading) return &lt;div&gt;Chargement...&lt;/div&gt;;
+    if (error) return &lt;div&gt;Erreur: {error}&lt;/div&gt;;
+    if (!user) return &lt;div&gt;Aucun utilisateur&lt;/div&gt;;
+    
+    return &lt;div&gt;Bienvenue {user.name}&lt;/div&gt;;
+}</code></pre>
+          </div>
+        </section>
+
+        <!-- Priorités -->
+        <section id="priorites">
+          <h2>🎯 Priorités pour React</h2>
+
+          <h3>Ordre d'apprentissage recommandé :</h3>
+
+          <ol>
+            <li>
+              <strong>Promises & async/await</strong>
+              <span class="badge badge-essential">ESSENTIEL</span>
+              <ul>
+                <li>Comprendre les Promises</li>
+                <li>Maîtriser async/await</li>
+                <li>Utiliser fetch pour récupérer des données</li>
+                <li>Gérer les erreurs avec try/catch</li>
+              </ul>
+            </li>
+
+            <li>
+              <strong>Modules ES6</strong>
+              <span class="badge badge-essential">ESSENTIEL</span>
+              <ul>
+                <li>Export/import nommés</li>
+                <li>Export/import par défaut</li>
+                <li>Organiser le code en modules</li>
+              </ul>
+            </li>
+
+            <li>
+              <strong>Destructuring</strong>
+              <span class="badge badge-important">Important</span>
+              <ul>
+                <li>Destructuring d'objets</li>
+                <li>Destructuring de tableaux</li>
+                <li>Dans les paramètres de fonctions</li>
+              </ul>
+            </li>
+
+            <li>
+              <strong>Array methods</strong>
+              <span class="badge badge-important">Important</span>
+              <ul>
+                <li>map() pour transformer et afficher</li>
+                <li>filter() pour filtrer les données</li>
+                <li>find() pour chercher un élément</li>
+                <li>reduce() pour agréger</li>
+              </ul>
+            </li>
+
+            <li>
+              <strong>Spread operator</strong>
+              <span class="badge badge-important">Important</span>
+              <ul>
+                <li>Copier des objets/tableaux</li>
+                <li>Fusionner des données</li>
+                <li>Mise à jour immutable du state</li>
+              </ul>
+            </li>
+
+            <li><strong>Optional chaining</strong> - Éviter les bugs</li>
+            <li><strong>Ternaires</strong> - Rendu conditionnel en JSX</li>
+            <li><strong>Local Storage</strong> - Persistance de données</li>
+            <li><strong>Error handling</strong> - Applications robustes</li>
+          </ol>
+        </section>
+
+        <!-- Timeline -->
+        <section id="timeline">
+          <h2>🚀 Timeline recommandée</h2>
+
+          <div class="info-box">
+            <strong>📅 2-3 semaines pour passer de 70% à 100%</strong>
+          </div>
+
+          <div class="timeline">
+            <h3>Semaine 1 : Asynchrone</h3>
+            <ul>
+              <li><strong>Jour 1-2</strong> : Promises (création, chaînage)</li>
+              <li><strong>Jour 3-4</strong> : async/await et fetch API</li>
+              <li>
+                <strong>Jour 5-7</strong> : Pratique intensive avec API
+                publiques
+              </li>
+            </ul>
+
+            <h3>Semaine 2 : Structures de données</h3>
+            <ul>
+              <li><strong>Jour 1-2</strong> : Modules ES6 (export/import)</li>
+              <li>
+                <strong>Jour 3-4</strong> : Destructuring (objets, tableaux,
+                paramètres)
+              </li>
+              <li><strong>Jour 5-7</strong> : Spread/Rest operators</li>
+            </ul>
+
+            <h3>Semaine 3 : Méthodes avancées</h3>
+            <ul>
+              <li>
+                <strong>Jour 1-3</strong> : Array methods (map, filter, reduce,
+                find)
+              </li>
+              <li>
+                <strong>Jour 4-5</strong> : Optional chaining, ternaires, Local
+                Storage
+              </li>
+              <li><strong>Jour 6-7</strong> : Error handling et révisions</li>
+            </ul>
+          </div>
+
+          <div class="success-box">
+            <h3>Après : <strong>Prêt pour React !</strong> 🎉</h3>
+          </div>
+        </section>
+
+        <!-- Concepts maîtrisés -->
+        <section>
+          <h2>📚 Concepts déjà maîtrisés (70%)</h2>
+
+          <ul>
+            <li>✅ Sélection DOM (querySelector, querySelectorAll)</li>
+            <li>
+              ✅ Événements (addEventListener, preventDefault, stopPropagation)
+            </li>
+            <li>✅ Manipulation DOM (classList, style, innerHTML)</li>
+            <li>✅ Template literals</li>
+            <li>✅ Fonctions fléchées</li>
+            <li>✅ forEach sur NodeList</li>
+            <li>✅ setTimeout</li>
+            <li>✅ Window API (scroll, mousemove)</li>
+            <li>✅ Forms (input, select, checkbox)</li>
+            <li>✅ Event bubbling et capturing</li>
+          </ul>
+        </section>
+
+        <!-- Exercices -->
+        <section>
+          <h2>💡 Exercices pratiques recommandés</h2>
+
+          <div class="info-box">
+            <h4>Exercice 1 : API + Array methods</h4>
+            <p>Créer une application qui :</p>
+            <ul>
+              <li>Récupère une liste d'utilisateurs depuis une API</li>
+              <li>Affiche seulement les adultes</li>
+              <li>Trie par nom</li>
+              <li>Permet de chercher par nom</li>
+            </ul>
+          </div>
+
+          <div class="info-box">
+            <h4>Exercice 2 : Todo List avec Local Storage</h4>
+            <p>Créer une todo list qui :</p>
+            <ul>
+              <li>Ajoute/supprime des tâches</li>
+              <li>Sauvegarde dans Local Storage</li>
+              <li>Filtre par statut (complétées/actives)</li>
+              <li>Persiste après rechargement</li>
+            </ul>
+          </div>
+
+          <div class="info-box">
+            <h4>Exercice 3 : Gestion d'erreurs</h4>
+            <p>Créer un formulaire qui :</p>
+            <ul>
+              <li>Valide les données</li>
+              <li>Envoie à une API</li>
+              <li>Gère les erreurs réseau</li>
+              <li>Affiche des messages appropriés</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <footer>
+        <p>📅 Document généré le 8 janvier 2026</p>
+        <p>🚀 Bonne progression vers React !</p>
+      </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

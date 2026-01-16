@@ -8,13 +8,25 @@ body{
     margin: 0;
     color: rgb(47, 189, 255);
     min-height: 200vh;
+    background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 .box{
     border: 6px solid white;
     transition: 0.25s ease;
     background: black;
     padding: 10px;
-    height: 400px;
+    height: 200px;
+}
+.arrow {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 15px solid rgb(47, 189, 255);
 }
 p{
     visibility: hidden;
@@ -63,6 +75,92 @@ ul {
     justify-content:space-around;
     padding: 0;
 }
+
+/* Sidebar avec effet auto-hide */
+.sidebar {
+    position: fixed;
+    left: -150px;
+    top: 250px;
+    width: 220px;
+    background: linear-gradient(180deg, #2c3e50 0%, #34495e 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 20px 10px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+    transition: left 0.4s ease;
+    z-index: 999;
+    border-radius: 0 0 15px 0;
+}
+
+.sidebar:hover {
+    left: 0;
+}
+
+.sidebar-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 15px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.icon {
+    font-size: 24px;
+    min-width: 30px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.tab-text {
+    font-weight: 500;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.sidebar:hover .tab-text {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.sidebar-btn:hover {
+    background: rgba(52, 152, 219, 0.8);
+    border-color: rgb(52, 152, 219);
+    transform: translateX(5px);
+}
+
+.sidebar-btn:active {
+    transform: translateX(5px) scale(0.98);
+}
+
+.sidebar-btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 0%;
+    background: rgb(52, 152, 219);
+    transition: height 0.3s ease;
+}
+
+.sidebar-btn:hover::before {
+    height: 100%;
+}
+
 /* .mousemove {
     height: 50px;
     width: 50px;
