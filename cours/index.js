@@ -1,3 +1,4 @@
+// Sélection des éléments du DOM
 const questionContainer = document.querySelector(".click-event"); 
 const buttons = document.querySelectorAll("button");
 const response = document.querySelector("p");
